@@ -14,6 +14,11 @@ function addBookToLibrary(name, author, pages, read) {
 // TODO: Remove test function calls and log
 addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295, false);
 addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, false);
-console.log(library);
 
+function showBooksInLibrary() {
+  library.forEach((book) => {
+    console.log(book);
+  });
+}
 
+showBooksInLibrary();
