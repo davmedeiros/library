@@ -1,0 +1,15 @@
+#library {
+  /* TODO: Remove outline */
+  outline: 1px dashed red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.book {
+  /* TODO: Remove outline */
+  outline: 1px dashed green;
+  border-radius: 12px;
+}
