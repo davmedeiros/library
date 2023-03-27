@@ -3,14 +3,16 @@
   --foreground-color: #4c4f69;
   --attention-color: #e64553;
   --overlay-color: #8c8fa1;
-  --subtle-color: #dc8a78;
   --ease-color: #7287fd;
-  --transition-color: #179299;
 }
 
 body {
   background-color: var(--base-color);
   color: var(--foreground-color);
+}
+
+h1 {
+  text-align: center;
 }
 
 #library {
@@ -24,8 +26,9 @@ body {
 .book {
   border-radius: 12px;
   display: grid;
-  grid-template-rows: 50px 1fr 50px 50px 50px;
-  color: var(--base-color)
+  grid-template-rows: 1fr 1fr 50px 50px 50px;
+  color: var(--base-color);
+  background-color: var(--overlay-color);
 }
 
 .book > * {
@@ -44,18 +47,6 @@ body {
 .book > :last-child {
   border-radius: 0 0 12px 12px;
   background-color: var(--ease-color);
-}
-
-.pages {
-  background-color: var(--overlay-color);
-}
-
-.author {
-  background-color: var(--subtle-color);
-}
-
-.read {
-  background-color: var(--transition-color);
 }
 
 .actions {

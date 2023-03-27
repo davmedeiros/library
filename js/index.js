@@ -16,8 +16,11 @@ addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295, false);
 addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, false);
 
 function showBooksInLibrary() {
+  const libraryUI = document.querySelector('#library');
   library.forEach((book) => {
-    console.log(book);
+    const bookUI = document.createElement('div');
+    book.classList.add('book');
+    
   });
 }
 
