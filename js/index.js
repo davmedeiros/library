@@ -21,4 +21,5 @@ function showBooksInLibrary() {
   });
 }
 
+// TODO: Remove test function call
 showBooksInLibrary();
