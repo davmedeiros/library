@@ -1,6 +1,5 @@
 :root {
   --base-color: #eff1f5;
-  --foreground-color: #4c4f69;
   --attention-color: #e64553;
   --overlay-color: #8c8fa1;
   --ease-color: #7287fd;
@@ -8,11 +7,27 @@
 
 body {
   background-color: var(--base-color);
-  color: var(--foreground-color);
+  color: var(--base-color);
+}
+
+header {
+  margin: 20px 20px 0 20px;
+  background-color: var(--overlay-color);
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
 }
 
 h1 {
   text-align: center;
+}
+
+button {
+  border: none;
+  background-color: var(--ease-color);
+  border-radius: 0 0 12px 12px;
+  color: var(--base-color);
+  font-weight: bold;
 }
 
 #library {
@@ -60,13 +75,12 @@ h1 {
 .actions > * {
   height: 70%;
   cursor: pointer;
-  
 }
 
 #toggle-read:hover {
-  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(22deg);
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(35deg);
 }
 
 #remove-book:hover {
-  filter: invert(.5) sepia(1) saturate(2) hue-rotate(316deg);
+  filter: invert(0.5) sepia(1) saturate(2) hue-rotate(316deg);
 }
