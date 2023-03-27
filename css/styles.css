@@ -33,3 +33,24 @@
 .book > :last-child {
   border-radius: 0 0 12px 12px;
 }
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  justify-items: center;
+}
+
+.actions > * {
+  height: 70%;
+  cursor: pointer;
+  
+}
+
+#toggle-read:hover {
+  filter: invert(.5) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
+#remove-book:hover {
+  filter: invert(.5) sepia(1) saturate(5) hue-rotate(310deg);
+}
