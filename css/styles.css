@@ -2,20 +2,27 @@
   --base-color: #eff1f5;
   --attention-color: #e64553;
   --overlay-color: #8c8fa1;
-  --ease-color: #7287fd;
+  --interact-color: #7287fd;
 }
 
 body {
   background-color: var(--base-color);
   color: var(--base-color);
+  display: grid;
+  gap: 20px;
+  padding: 20px;
 }
 
 header {
-  margin: 20px 20px 0 20px;
   background-color: var(--overlay-color);
   border-radius: 12px;
   display: grid;
   grid-template-rows: 2fr 1fr;
+}
+
+main {
+  display: grid;
+  gap: 20px;
 }
 
 h1 {
@@ -24,11 +31,17 @@ h1 {
 
 button {
   border: none;
-  background-color: var(--ease-color);
-  border-radius: 0 0 12px 12px;
+  background-color: var(--interact-color);
   color: var(--base-color);
   font-weight: bold;
   cursor: pointer;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#new-book {
+  border-radius: 0 0 12px 12px;
+  padding: 0;
 }
 
 #library {
@@ -36,7 +49,6 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 300px;
   gap: 20px;
-  padding: 20px;
 }
 
 .book {
@@ -63,7 +75,7 @@ button {
 
 .book > :last-child {
   border-radius: 0 0 12px 12px;
-  background-color: var(--ease-color);
+  background-color: var(--interact-color);
 }
 
 .actions {
@@ -84,4 +96,39 @@ button {
 
 #remove-book:hover {
   filter: invert(0.5) sepia(1) saturate(2) hue-rotate(316deg);
+}
+
+#interactions {
+  background-color: var(--overlay-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#interactions > form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form-field {
+  display: grid;
+  gap: 5px;
+}
+
+.form-field.radio {
+  grid-column: 1;
+  grid-template-columns: 50px 1fr;
+  justify-items: start;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--interact-color);
 }
