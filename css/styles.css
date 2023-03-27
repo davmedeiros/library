@@ -42,6 +42,7 @@ h1 {
 .book > :first-child {
   border-radius: 12px 12px 0 0;
   background-color: var(--attention-color);
+  font-size: 1.3rem;
 }
 
 .book > :last-child {

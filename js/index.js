@@ -13,14 +13,40 @@ function addBookToLibrary(name, author, pages, read) {
 
 // TODO: Remove test function calls and log
 addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295, false);
-addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, false);
+addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, true);
 
 function showBooksInLibrary() {
-  const libraryUI = document.querySelector('#library');
+  const libraryView = document.querySelector('#library');
+
   library.forEach((book) => {
-    const bookUI = document.createElement('div');
-    book.classList.add('book');
-    
+    const bookView = document.createElement('div');
+    bookView.classList.add('book');
+
+    Object.keys(book).forEach((key) => {
+      const field = document.createElement('p');
+      field.classList.add(key);
+
+      if (key === 'read') {
+        field.textContent = book[key] ? 'read' : 'not read yet';
+      } else {
+        field.textContent = book[key];
+      }
+
+      bookView.appendChild(field);
+    });
+
+    const actions = document.createElement('div');
+    actions.classList.add('actions');
+    const toggleRead = document.createElement('img');
+    toggleRead.id = 'toggle-read';
+    toggleRead.src = '../images/book-check-outline.svg';
+    actions.appendChild(toggleRead);
+    const removeBook = document.createElement('img');
+    removeBook.id = 'remove-book';
+    removeBook.src = '../images/book-remove-outline.svg';
+    actions.appendChild(removeBook);
+    bookView.appendChild(actions);
+    libraryView.appendChild(bookView);
   });
 }
 
