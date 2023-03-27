@@ -12,4 +12,24 @@
   /* TODO: Remove outline */
   outline: 1px dashed green;
   border-radius: 12px;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px 50px 50px;
+}
+
+.book > * {
+  /* TODO: Remove outline */
+  outline: 1px dashed blue;
+  margin: 0;
+  padding: 0 10px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.book > :first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.book > :last-child {
+  border-radius: 0 0 12px 12px;
 }
