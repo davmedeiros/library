@@ -28,6 +28,7 @@ button {
   border-radius: 0 0 12px 12px;
   color: var(--base-color);
   font-weight: bold;
+  cursor: pointer;
 }
 
 #library {
