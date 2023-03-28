@@ -18,22 +18,32 @@
         <form id="add-book" action="#" method="post">
           <div class="form-field">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <input class="new-book-input" type="text" name="name" id="name" />
           </div>
           <div class="form-field">
             <label for="author">Author</label>
-            <input type="text" name="author" id="author" />
+            <input
+              class="new-book-input"
+              type="text"
+              name="author"
+              id="author"
+            />
           </div>
           <div class="form-field">
-            <label for="author">Pages</label>
-            <input type="text" name="author" id="author" />
+            <label for="pages">Pages</label>
+            <input class="new-book-input" type="text" name="pages" id="pages" />
           </div>
           <div class="form-field radio">
-            <label for="author">Read</label>
-            <input type="checkbox" name="author" id="author" />
+            <label for="read">Read</label>
+            <input
+              class="new-book-input"
+              type="checkbox"
+              name="read"
+              id="read"
+            />
           </div>
         </form>
-        <button id="add-to-library" type="submit" form="add-book">
+        <button id="add-to-library" type="button">
           Add to library
         </button>
       </section>

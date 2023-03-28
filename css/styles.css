@@ -3,6 +3,7 @@
   --attention-color: #e64553;
   --overlay-color: #8c8fa1;
   --interact-color: #7287fd;
+  --interact-active-color: #5970f7;
 }
 
 body {
@@ -37,6 +38,10 @@ button {
   cursor: pointer;
   border-radius: 12px;
   padding: 20px;
+}
+
+button:hover {
+  background-color: var(--interact-active-color);
 }
 
 #new-book {
@@ -102,7 +107,7 @@ button {
   background-color: var(--overlay-color);
   border-radius: 12px;
   padding: 20px;
-  display: grid;
+  display: none;
   gap: 20px;
 }
 

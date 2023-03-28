@@ -8,7 +8,7 @@ function Book(name, author, pages, read) {
 }
 
 function addBookToLibrary(name, author, pages, read) {
-  library.push(new Book(name, author, pages, read));
+  library.push(new Book(name, author, `${pages} pages`, read));
 }
 
 // TODO: Remove test function calls and log
@@ -53,3 +53,31 @@ function showBooksInLibrary() {
 (function showOnLoad() {
   showBooksInLibrary();
 })();
+
+function toggleNewBookForm() {
+  const interactions = document.querySelector('#interactions');
+  const newBookButton = document.querySelector('#new-book');
+  if (newBookButton.classList.contains('active')) {
+    interactions.style.display = 'none';
+    newBookButton.classList.remove('active');
+    newBookButton.textContent = 'NEW BOOK';
+  } else {
+    interactions.style.display = 'grid';
+    newBookButton.classList.add('active');
+    newBookButton.textContent = 'CLOSE';
+    const addBookButton = document.querySelector('#add-to-library');
+    addBookButton.addEventListener('click', () => {
+      const name = document.querySelector('#name').value;
+      const author = document.querySelector('#author').value;
+      const pages = document.querySelector('#pages').value;
+      const read = !!(document.querySelector('#read').checked);
+      addBookToLibrary(name, author, pages, read);
+      showBooksInLibrary();
+    });
+  }
+}
+
+const newBookButton = document.querySelector('#new-book');
+newBookButton.addEventListener('click', () => {
+  toggleNewBookForm();
+});
