@@ -15,7 +15,7 @@
     </header>
     <main>
       <section id="interactions">
-        <form action="#" method="post">
+        <form id="add-book" action="#" method="post">
           <div class="form-field">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" />
@@ -32,8 +32,10 @@
             <label for="author">Read</label>
             <input type="checkbox" name="author" id="author" />
           </div>
-          <button type="submit">Add to library</button>
         </form>
+        <button id="add-to-library" type="submit" form="add-book">
+          Add to library
+        </button>
       </section>
       <section id="library"></section>
     </main>

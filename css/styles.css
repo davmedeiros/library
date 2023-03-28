@@ -102,6 +102,8 @@ button {
   background-color: var(--overlay-color);
   border-radius: 12px;
   padding: 20px;
+  display: grid;
+  gap: 20px;
 }
 
 #interactions > form {
@@ -129,6 +131,6 @@ input {
   border: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   accent-color: var(--interact-color);
 }
