@@ -50,10 +50,14 @@ function showBooksInLibrary() {
     const toggleRead = document.createElement('img');
     toggleRead.classList.add('toggle-read');
     toggleRead.src = '../images/book-check-outline.svg';
+    toggleRead.alt = 'Toggle read';
+    toggleRead.title = 'Toggle read';
     actions.appendChild(toggleRead);
     const removeBook = document.createElement('img');
     removeBook.classList.add('remove-book');
     removeBook.src = '../images/book-remove-outline.svg';
+    removeBook.alt = 'Remove book';
+    removeBook.title = 'Remove book';
     actions.appendChild(removeBook);
     bookView.appendChild(actions);
     libraryView.appendChild(bookView);
