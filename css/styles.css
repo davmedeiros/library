@@ -95,11 +95,11 @@ button:hover {
   cursor: pointer;
 }
 
-#toggle-read:hover {
+.toggle-read:hover {
   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(35deg);
 }
 
-#remove-book:hover {
+.remove-book:hover {
   filter: invert(0.5) sepia(1) saturate(2) hue-rotate(316deg);
 }
 
@@ -130,6 +130,7 @@ button:hover {
 }
 
 input {
+  height: 24px;
   padding: 10px;
   border-radius: 12px;
   outline: none;

@@ -7,8 +7,16 @@ function Book(name, author, pages, read) {
   this.read = read;
 }
 
+Book.prototype.toggleRead = function toggleRead() {
+  this.read = !this.read;
+};
+
 function addBookToLibrary(name, author, pages, read) {
   library.push(new Book(name, author, `${pages} pages`, read));
+}
+
+function removeBookFromLibrary(index) {
+  library.splice(index, 1);
 }
 
 // TODO: Remove test function calls and log
@@ -22,9 +30,11 @@ function showBooksInLibrary() {
     libraryView.removeChild(libraryView.lastChild);
   }
 
+  let count = 0;
   library.forEach((book) => {
     const bookView = document.createElement('div');
     bookView.classList.add('book');
+    bookView.dataset.indexNumber = count;
 
     Object.keys(book).forEach((key) => {
       const field = document.createElement('p');
@@ -42,15 +52,27 @@ function showBooksInLibrary() {
     const actions = document.createElement('div');
     actions.classList.add('actions');
     const toggleRead = document.createElement('img');
-    toggleRead.id = 'toggle-read';
+    toggleRead.classList.add('toggle-read');
     toggleRead.src = '../images/book-check-outline.svg';
     actions.appendChild(toggleRead);
     const removeBook = document.createElement('img');
-    removeBook.id = 'remove-book';
+    removeBook.classList.add('remove-book');
     removeBook.src = '../images/book-remove-outline.svg';
     actions.appendChild(removeBook);
     bookView.appendChild(actions);
     libraryView.appendChild(bookView);
+
+    removeBook.addEventListener('click', () => {
+      removeBookFromLibrary(bookView.dataset.indexNumber);
+      showBooksInLibrary();
+    });
+
+    toggleRead.addEventListener('click', () => {
+      library[bookView.dataset.indexNumber].toggleRead();
+      showBooksInLibrary();
+    });
+
+    count += 1;
   });
 }
 
