@@ -19,10 +19,6 @@ function removeBookFromLibrary(index) {
   library.splice(index, 1);
 }
 
-// TODO: Remove test function calls and log
-addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295, false);
-addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, true);
-
 function showBooksInLibrary() {
   const libraryView = document.querySelector('#library');
 
