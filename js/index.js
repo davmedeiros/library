@@ -17,6 +17,10 @@ addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, true);
 
 function showBooksInLibrary() {
   const libraryView = document.querySelector('#library');
+  
+  while (libraryView.lastChild) {
+    libraryView.removeChild(libraryView.lastChild);
+  }
 
   library.forEach((book) => {
     const bookView = document.createElement('div');
@@ -70,7 +74,7 @@ function toggleNewBookForm() {
       const name = document.querySelector('#name').value;
       const author = document.querySelector('#author').value;
       const pages = document.querySelector('#pages').value;
-      const read = !!(document.querySelector('#read').checked);
+      const read = !!document.querySelector('#read').checked;
       addBookToLibrary(name, author, pages, read);
       showBooksInLibrary();
     });
