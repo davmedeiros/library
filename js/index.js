@@ -17,7 +17,7 @@ addBookToLibrary('Harry Potter', 'J. K. Rowling', 223, true);
 
 function showBooksInLibrary() {
   const libraryView = document.querySelector('#library');
-  
+
   while (libraryView.lastChild) {
     libraryView.removeChild(libraryView.lastChild);
   }
@@ -61,6 +61,7 @@ function showBooksInLibrary() {
 function toggleNewBookForm() {
   const interactions = document.querySelector('#interactions');
   const newBookButton = document.querySelector('#new-book');
+
   if (newBookButton.classList.contains('active')) {
     interactions.style.display = 'none';
     newBookButton.classList.remove('active');
@@ -69,19 +70,26 @@ function toggleNewBookForm() {
     interactions.style.display = 'grid';
     newBookButton.classList.add('active');
     newBookButton.textContent = 'CLOSE';
-    const addBookButton = document.querySelector('#add-to-library');
-    addBookButton.addEventListener('click', () => {
-      const name = document.querySelector('#name').value;
-      const author = document.querySelector('#author').value;
-      const pages = document.querySelector('#pages').value;
-      const read = !!document.querySelector('#read').checked;
-      addBookToLibrary(name, author, pages, read);
-      showBooksInLibrary();
-    });
   }
 }
 
 const newBookButton = document.querySelector('#new-book');
 newBookButton.addEventListener('click', () => {
   toggleNewBookForm();
+});
+
+const addBookButton = document.querySelector('#add-to-library');
+addBookButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name');
+  const author = document.querySelector('#author');
+  const pages = document.querySelector('#pages');
+  const read = document.querySelector('#read');
+  addBookToLibrary(name.value, author.value, pages.value, !!read.checked);
+  toggleNewBookForm();
+  name.value = '';
+  author.value = '';
+  pages.value = '';
+  read.checked = false;
+  showBooksInLibrary();
 });
