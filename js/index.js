@@ -19,5 +19,3 @@ function displayLibrary() {
 addBookToLibrary('Open Window', 'T.J. Roosevelt', 341, true);
 addBookToLibrary('Mysteries Of The Hallow Grove', 'Jane Garner', 295, false);
 addBookToLibrary('Cloud Landing', 'Hui Jun', 164, false);
-
-displayLibrary();
