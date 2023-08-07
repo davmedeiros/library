@@ -82,6 +82,10 @@ form {
 
 aside {
     padding-top: 300px;
+    position: fixed;
+    justify-self: flex-end;
+    width: 450px;
+    height: calc(100svh - var(--gap-size) * 2);
 }
 
 #new-book {
