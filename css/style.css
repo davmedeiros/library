@@ -63,6 +63,7 @@ aside {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     border-radius: var(--border-radius-size);
     color: var(--accent-color);
+    padding: 0 5px;
 }
 
 aside {
