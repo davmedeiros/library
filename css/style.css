@@ -64,3 +64,23 @@ aside {
     border-radius: 8px;
     color: var(--accent-color);
 }
+
+aside {
+    display: grid;
+    padding: var(--gap-size);
+    justify-content: center;
+    align-items: center;
+}
+
+#new-book {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    font-size: 6rem;
+    background-color: var(--interact-color);
+    color: var(--accent-color);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.6);
+}
