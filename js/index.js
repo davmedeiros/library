@@ -49,6 +49,15 @@ function displayLibrary() {
         }
     }
 
+    this.addNewBookBehavior = (button) => {
+        button.addEventListener('click', () => {
+            this.clear();
+            this.displayNewBookForm();
+        });
+    }
+
+    this.addNewBookBehavior(newBookButton);
+
     this.displayNewBookForm = () => {
         const form = document.createElement('form');
         const title = document.createElement('input');
@@ -83,15 +92,16 @@ function displayLibrary() {
         submit.addEventListener('click', () => {
             addBookToLibrary(title.value, author.value, pages.value, status.checked);
             displayLibrary();
+            this.clear();
+            const newBook = document.createElement('button');
+            newBook.id = 'new-book';
+            newBook.textContent = '+';
+            this.addNewBookBehavior(newBook);
+            aside.appendChild(newBook);
         })
 
         aside.appendChild(form);
     }
-    
-    newBookButton.addEventListener('click', () => {
-        this.clear();
-        this.displayNewBookForm();
-    });
 })();
 
 
