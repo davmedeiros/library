@@ -12,6 +12,7 @@
     --accent-color: #C8E4B2;
     --attention-color: #7EAA92;
     --subtle-color: #9ED2BE;
+    --interact-color: #65451F;
     --gap-size: 32px;
     --border-radius-size: 64px;
 }
@@ -45,7 +46,7 @@ aside {
 }
 
 .book {
-    background-color: var(--attention-color);
+    background-color: var(--interact-color);
     display: grid;
     gap: var(--gap-size);
     padding: var(--gap-size);
