@@ -20,7 +20,7 @@ function clearShelf(shelf) {
 function displayLibrary() {
     const shelf = document.querySelector('main');
     clearShelf(shelf);
-    library.forEach(book => {
+    library.forEach((book, index) => {
         const cover = document.createElement('div');
         cover.classList.add('book');
         const title = document.createElement('h3');
@@ -31,6 +31,7 @@ function displayLibrary() {
         author.textContent = book.author;
         pages.textContent = book.pages;
         status.textContent = book.isRead ? 'read' : 'not read';
+        cover.dataset.indexNumber = index;
         cover.appendChild(title);
         cover.appendChild(author);
         cover.appendChild(pages);
