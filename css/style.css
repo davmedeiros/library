@@ -67,7 +67,8 @@ aside {
 }
 
 aside {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: var(--gap-size);
     justify-content: center;
     align-items: center;
