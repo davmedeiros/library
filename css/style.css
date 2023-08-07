@@ -86,3 +86,15 @@ aside {
     color: var(--accent-color);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.6);
 }
+
+input {
+    padding: 10px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-size);
+}
+
+input:focus {
+    outline: 4px solid var(--interact-color);
+}

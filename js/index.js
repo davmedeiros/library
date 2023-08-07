@@ -47,6 +47,7 @@ function displayLibrary() {
         const form = document.createElement('form');
         const title = document.createElement('input');
         title.type = 'text';
+        title.placeholder = 'Title';
         form.appendChild(title);
         aside.appendChild(form);
     }
