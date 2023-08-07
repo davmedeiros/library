@@ -66,12 +66,14 @@ aside {
     padding: 0 5px;
 }
 
-aside {
+aside,
+form {
     display: flex;
     flex-direction: column;
     padding: var(--gap-size);
     justify-content: center;
     align-items: center;
+    gap: var(--gap-size);
 }
 
 #new-book {
@@ -95,6 +97,17 @@ input {
     border-radius: var(--border-radius-size);
 }
 
-input:focus {
+input[type="text"]:focus {
     outline: 4px solid var(--interact-color);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--attention-color);
+    height: 40px;
+    width: 40px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--interact-color);
 }

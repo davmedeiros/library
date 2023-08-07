@@ -46,9 +46,28 @@ function displayLibrary() {
         console.log('hit');
         const form = document.createElement('form');
         const title = document.createElement('input');
+        title.classList.add('title');
         title.type = 'text';
         title.placeholder = 'Title';
+        const author = document.createElement('input');
+        author.classList.add('author');
+        author.type = 'text';
+        author.placeholder = 'Author';
+        const pages = document.createElement('input');
+        pages.classList.add('pages');
+        pages.type = 'text';
+        pages.placeholder = 'Pages';
+        const labelStatus = document.createElement('label');
+        labelStatus.setAttribute('for', 'status');
+        labelStatus.textContent = 'Mark as read?';
+        const status = document.createElement('input');
+        status.id = 'read';
+        status.type = 'checkbox';
         form.appendChild(title);
+        form.appendChild(author);
+        form.appendChild(pages);
+        form.appendChild(labelStatus);
+        form.appendChild(status);
         aside.appendChild(form);
     }
     
