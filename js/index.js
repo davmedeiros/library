@@ -43,7 +43,6 @@ function displayLibrary() {
     }
 
     this.displayNewBookForm = () => {
-        console.log('hit');
         const form = document.createElement('form');
         const title = document.createElement('input');
         title.classList.add('title');
@@ -63,11 +62,16 @@ function displayLibrary() {
         const status = document.createElement('input');
         status.id = 'read';
         status.type = 'checkbox';
+        const submit = document.createElement('button');
+        submit.type = 'button';
+        submit.textContent = 'Add Book';
+        submit.id = 'submit-book';
         form.appendChild(title);
         form.appendChild(author);
         form.appendChild(pages);
         form.appendChild(labelStatus);
         form.appendChild(status);
+        form.appendChild(submit);
         aside.appendChild(form);
     }
     

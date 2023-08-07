@@ -111,3 +111,14 @@ label {
     font-weight: bold;
     color: var(--interact-color);
 }
+
+form button {
+    padding: 24px 76px;
+    border: none;
+    background-color: var(--interact-color);
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    border-radius: var(--border-radius-size);
+    font-weight: bold;
+    cursor: pointer;
+}
