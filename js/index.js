@@ -32,9 +32,9 @@ function displayLibrary() {
         const remove = document.createElement('button');
         remove.textContent = '\u2717';       
         actions.appendChild(remove);
-        const markAsRead = document.createElement('button');
-        markAsRead.textContent = '\u2713';
-        actions.appendChild(markAsRead);
+        const toggleRead = document.createElement('button');
+        toggleRead.textContent = '\u2713';
+        actions.appendChild(toggleRead);
         title.textContent = book.title;
         author.textContent = book.author;
         pages.textContent = book.pages;
@@ -49,6 +49,12 @@ function displayLibrary() {
 
         remove.addEventListener('click', () => {
             library.splice(cover.dataset.indexNumber, 1);
+            clearShelf(shelf);
+            displayLibrary();
+        })
+
+        toggleRead.addEventListener('click', () => {
+            library[cover.dataset.indexNumber].isRead = !library[cover.dataset.indexNumber].isRead;
             clearShelf(shelf);
             displayLibrary();
         })
