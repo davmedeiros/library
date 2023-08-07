@@ -14,7 +14,7 @@
     --subtle-color: #9ED2BE;
     --interact-color: #65451F;
     --gap-size: 32px;
-    --border-radius-size: 64px;
+    --border-radius-size: 8px;
 }
 
 body {
@@ -51,7 +51,7 @@ aside {
     grid-template-rows: 50px 50px 50px 50px;
     gap: var(--gap-size);
     padding: var(--gap-size);
-    border-radius: 8px;
+    border-radius: var(--border-radius-size);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -61,7 +61,7 @@ aside {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
+    border-radius: var(--border-radius-size);
     color: var(--accent-color);
 }
 
