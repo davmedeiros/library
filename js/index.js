@@ -32,6 +32,32 @@ function displayLibrary() {
     });
 }
 
+(function ControlCenter() {
+    const aside = document.querySelector('aside');
+    const newBookButton = document.querySelector('#new-book');
+
+    this.clear = () => {
+        while (aside.firstChild) {
+            aside.removeChild(aside.firstChild);
+        }
+    }
+
+    this.displayNewBookForm = () => {
+        console.log('hit');
+        const form = document.createElement('form');
+        const title = document.createElement('input');
+        title.type = 'text';
+        form.appendChild(title);
+        aside.appendChild(form);
+    }
+    
+    newBookButton.addEventListener('click', () => {
+        this.clear();
+        this.displayNewBookForm();
+    });
+})();
+
+
 
 // TEST
 addBookToLibrary('Open Window', 'T.J. Roosevelt', 341, true);
