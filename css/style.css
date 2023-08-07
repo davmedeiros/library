@@ -12,4 +12,28 @@
     --accent-color: #C8E4B2;
     --attention-color: #7EAA92;
     --subtle-color: #9ED2BE;
+    --gap-size: 32px;
+}
+
+body {
+    display: grid;
+    grid-template: 1fr / 1fr 300px;
+    background-color: var(--subtle-color);
+    min-height: 100svh;
+    padding: var(--gap-size);
+    gap: var(--gap-size);
+}
+
+main,
+aside {
+    border-radius: 64px;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+main {
+    background-color: var(--base-color);
+}
+
+aside {
+    background-color: var(--accent-color);
 }
