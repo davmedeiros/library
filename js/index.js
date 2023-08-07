@@ -11,8 +11,15 @@ function addBookToLibrary(title, author, pages, isRead) {
     library.push(new Book(title, author, pages, isRead));
 }
 
+function clearShelf(shelf) {
+    while (shelf.firstChild) {
+        shelf.removeChild(shelf.firstChild);
+    }
+}
+
 function displayLibrary() {
     const shelf = document.querySelector('main');
+    clearShelf(shelf);
     library.forEach(book => {
         const cover = document.createElement('div');
         cover.classList.add('book');
@@ -72,6 +79,12 @@ function displayLibrary() {
         form.appendChild(labelStatus);
         form.appendChild(status);
         form.appendChild(submit);
+
+        submit.addEventListener('click', () => {
+            addBookToLibrary(title.value, author.value, pages.value, status.checked);
+            displayLibrary();
+        })
+
         aside.appendChild(form);
     }
     
