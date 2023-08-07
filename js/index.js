@@ -27,6 +27,14 @@ function displayLibrary() {
         const author = document.createElement('p');
         const pages = document.createElement('p');
         const status = document.createElement('p');
+        const actions = document.createElement('div');
+        actions.classList.add('actions');
+        const remove = document.createElement('button');
+        remove.textContent = '\u2717'
+        actions.appendChild(remove);
+        const markAsRead = document.createElement('button');
+        markAsRead.textContent = '\u2713'
+        actions.appendChild(markAsRead);
         title.textContent = book.title;
         author.textContent = book.author;
         pages.textContent = book.pages;
@@ -36,6 +44,7 @@ function displayLibrary() {
         cover.appendChild(author);
         cover.appendChild(pages);
         cover.appendChild(status);
+        cover.appendChild(actions);
         shelf.appendChild(cover);
     });
 }
