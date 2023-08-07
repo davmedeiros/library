@@ -75,9 +75,13 @@ form {
     display: flex;
     flex-direction: column;
     padding: var(--gap-size);
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: var(--gap-size);
+}
+
+aside {
+    padding-top: 300px;
 }
 
 #new-book {
