@@ -75,13 +75,12 @@ form {
     display: flex;
     flex-direction: column;
     padding: var(--gap-size);
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: var(--gap-size);
 }
 
 aside {
-    padding-top: 300px;
     position: fixed;
     justify-self: flex-end;
     width: 450px;
