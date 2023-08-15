@@ -1,146 +1,147 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --base-color: #FFD9B7;
-    --accent-color: #F4D160;
-    --attention-color: #7EAA92;
-    --subtle-color: #9ED2BE;
-    --interact-color: #65451F;
-    --gap-size: 32px;
-    --border-radius-size: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --base-color: #ffd9b7;
+  --accent-color: #f4d160;
+  --attention-color: #7eaa92;
+  --subtle-color: #9ed2be;
+  --interact-color: #65451f;
+  --gap-size: 32px;
+  --border-radius-size: 8px;
 }
 
 body {
-    display: grid;
-    grid-template: 1fr / 1fr 450px;
-    background-color: var(--subtle-color);
-    min-height: 100svh;
-    padding: var(--gap-size);
-    gap: var(--gap-size);
+  display: grid;
+  grid-template: 1fr / 1fr 450px;
+  background-color: var(--subtle-color);
+  min-height: 100svh;
+  padding: var(--gap-size);
+  gap: var(--gap-size);
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 main,
 aside {
-    border-radius: var(--border-radius-size);
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius-size);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 main {
-    background-color: var(--base-color);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: start;
-    padding: var(--gap-size);
-    gap: var(--gap-size);
+  background-color: var(--base-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+  padding: var(--gap-size);
+  gap: var(--gap-size);
 }
 
 aside {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .book {
-    background-color: var(--interact-color);
-    display: grid;
-    grid-auto-rows: 50px;
-    gap: var(--gap-size);
-    padding: var(--gap-size);
-    border-radius: var(--border-radius-size);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  background-color: var(--interact-color);
+  display: grid;
+  grid-auto-rows: 50px;
+  gap: var(--gap-size);
+  padding: var(--gap-size);
+  border-radius: var(--border-radius-size);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 .book * {
-    background-color: var(--interact-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-    border-radius: var(--border-radius-size);
-    color: var(--accent-color);
-    padding: 0 5px;
+  background-color: var(--interact-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius-size);
+  color: var(--accent-color);
+  padding: 0 5px;
 }
 
 aside,
 form {
-    display: flex;
-    flex-direction: column;
-    padding: var(--gap-size);
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap-size);
+  display: flex;
+  flex-direction: column;
+  padding: var(--gap-size);
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-size);
 }
 
 aside {
-    position: fixed;
-    justify-self: flex-end;
-    width: 450px;
-    height: calc(100svh - var(--gap-size) * 2);
+  position: fixed;
+  justify-self: flex-end;
+  width: 450px;
+  height: calc(100svh - var(--gap-size) * 2);
 }
 
 #new-book {
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    border: none;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    font-size: 6rem;
-    background-color: var(--interact-color);
-    color: var(--accent-color);
-    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.6);
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-size: 6rem;
+  background-color: var(--interact-color);
+  color: var(--accent-color);
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.6);
 }
 
 input {
-    padding: 10px;
-    font-size: 1.3rem;
-    border: none;
-    outline: none;
-    border-radius: var(--border-radius-size);
+  padding: 10px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-size);
 }
 
-input[type="text"]:focus {
-    outline: 4px solid var(--interact-color);
+input[type='text']:focus {
+  outline: 4px solid var(--interact-color);
 }
 
-input[type="checkbox"] {
-    accent-color: var(--attention-color);
-    height: 40px;
-    width: 40px;
+input[type='checkbox'] {
+  accent-color: var(--attention-color);
+  height: 40px;
+  width: 40px;
 }
 
 label {
-    font-weight: bold;
-    color: var(--interact-color);
+  font-weight: bold;
+  color: var(--interact-color);
 }
 
 form button {
-    padding: 24px 76px;
-    border: none;
-    background-color: var(--interact-color);
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    border-radius: var(--border-radius-size);
-    font-weight: bold;
+  padding: 24px 76px;
+  border: none;
+  background-color: var(--interact-color);
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  border-radius: var(--border-radius-size);
+  font-weight: bold;
 }
 
 .book button {
-    border: 2px solid var(--accent-color);
-    font-size: 1.4rem;
+  border: 2px solid var(--accent-color);
+  font-size: 1.4rem;
 }
 
 .actions {
-    box-shadow: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: calc(var(--gap-size) / 2);
+  box-shadow: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: calc(var(--gap-size) / 2);
 }
