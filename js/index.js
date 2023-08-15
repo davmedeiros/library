@@ -87,14 +87,17 @@ function displayLibrary() {
     title.classList.add('title');
     title.type = 'text';
     title.placeholder = 'Title';
+    title.required = true;
     const author = document.createElement('input');
     author.classList.add('author');
     author.type = 'text';
     author.placeholder = 'Author';
+    author.required = true;
     const pages = document.createElement('input');
     pages.classList.add('pages');
     pages.type = 'text';
     pages.placeholder = 'Pages';
+    pages.required = true;
     const labelStatus = document.createElement('label');
     labelStatus.setAttribute('for', 'status');
     labelStatus.textContent = 'Mark as read?';
@@ -113,14 +116,23 @@ function displayLibrary() {
     form.appendChild(submit);
 
     submit.addEventListener('click', () => {
-      addBookToLibrary(title.value, author.value, pages.value, status.checked);
-      displayLibrary();
-      this.clear();
-      const newBook = document.createElement('button');
-      newBook.id = 'new-book';
-      newBook.textContent = '+';
-      this.addNewBookBehavior(newBook);
-      aside.appendChild(newBook);
+      if (form.checkValidity()) {
+        addBookToLibrary(
+          title.value,
+          author.value,
+          pages.value,
+          status.checked
+        );
+        displayLibrary();
+        this.clear();
+        const newBook = document.createElement('button');
+        newBook.id = 'new-book';
+        newBook.textContent = '+';
+        this.addNewBookBehavior(newBook);
+        aside.appendChild(newBook);
+      } else {
+        alert('Please, enter the title, author and number of pages!');
+      }
     });
 
     aside.appendChild(form);
