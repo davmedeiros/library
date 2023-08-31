@@ -1,3 +1,1 @@
-# library
-
-TOP - Library
+# TOP - Educational Project - Library
